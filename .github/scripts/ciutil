@@ -1,0 +1,178 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Preinstall
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+download() {
+  local url="$1"
+  local software=$(basename "$url")
+
+  if ! command -v "$software" &> /dev/null; then
+    echo "𐄂 $software is not installed, downloading ..."
+  else
+    printf "%-35s %s\n" "✔ $software is already preinstalled. " "[ `command -v $software` ] - installing anyway"
+  fi
+
+    wget -O ~/.local/bin/$software -q -nv --content-disposition "$url"
+    chmod +x ~/.local/bin/$software 2> /dev/null || true
+}
+
+preinstall-binaries() {
+  cp .github/scripts/ciutil ~/.local/bin/
+
+  for url in $(jq .preinstallBinaries package.json | jq -r .[]); do
+    download "$url" &
+  done
+
+  wait
+
+install-nodemodules () {
+  if jq -e .dependencies $GITROOT/package.json &>/dev/null; then
+    cd $GITROOT
+
+    # Applying dirty fix for *not* including @types/* in the production ci
+    if [ -f pnpm-lock.yaml ]; then
+      cp pnpm-lock.yaml $RUNNER_TEMPDIR/
+      grep -v "'@types/" $RUNNER_TEMPDIR/pnpm-lock.yaml >| pnpm-lock.yaml
+    fi
+
+    pnpm install --frozen-lockfile --production --prefer-offline --no-verify-store-integrity
+
+    mv $RUNNER_TEMPDIR/pnpm-lock.yaml .
+  fi
+}
+
+
+}
+create-directories() {
+  mkdir -pv ~/.local/bin
+  mkdir -pv $ACTIONS_CACHE_DIR
+  mkdir -pv $ACTIONS_CACHE_BIN_DIR
+  mkdir -pv $PNPM_HOME
+  mkdir -pv $PNPM_STORE_DIR
+  mkdir -pv $RUNNER_TEMPDIR
+  mkdir -pv $DEBUG_DIR
+}
+
+optimize-apt-get-install() {
+  sudo cp -p /bin/true /usr/bin/mandb 2>/dev/null || true
+  sudo mv -f /var/cache/man /tmp/ 2>/dev/null || true
+}
+
+git-commit-to-repository() {
+  git config user.name github-actions
+  git config user.email github-actions@github.com
+  git pull --rebase
+  git add . --verbose
+  stats=$(git diff --cached --shortstat | sed -E 's/ (insertion|insertions|deletion|deletions)//g')
+  git commit -m "⚡️ CI: $stats [skip ci]" -a || true
+}
+
+set-env-variables() {
+  # Action Cache
+  export ACTIONS_CACHE_DIR=$RUNNER_WORKSPACE/.actions-cache
+
+  echo ACTIONS_CACHE_DIR=$ACTIONS_CACHE_DIR                    >> $GITHUB_ENV
+  echo ACTIONS_CACHE_BIN_DIR=$ACTIONS_CACHE_DIR/bin            >> $GITHUB_ENV
+  echo PNPM_STORE_DIR=$ACTIONS_CACHE_DIR/pnpm/pnpm-store       >> $GITHUB_ENV
+  echo EGET_BIN=$ACTIONS_CACHE_DIR/bin                         >> $GITHUB_ENV
+  echo DENO_DIR=$ACTIONS_CACHE_DIR/.deno                       >> $GITHUB_ENV
+  echo PNPM_HOME=$ACTIONS_CACHE_DIR/pnpm                       >> $GITHUB_ENV
+
+  # TTL Cache (Cache that will automatically be invalidated)
+  export TTL_CACHE_DIR=$RUNNER_WORKSPACE/.cache-ttl
+  echo TTL_CACHE_DIR=$TTL_CACHE_DIR                            >> $GITHUB_ENV
+  echo BKT_CACHE_DIR=$TTL_CACHE_DIR/bkt                        >> $GITHUB_ENV
+
+  # Other dirs
+  echo DEBUG_DIR=$RUNNER_WORKSPACE/.debug                      >> $GITHUB_ENV
+  echo RUNNER_TEMPDIR=$RUNNER_TEMP/`date +%s%N`                >> $GITHUB_ENV
+
+  # Other env
+  echo CACHE_PREFIX=$(date +'%U')                              >> $GITHUB_ENV
+  echo NODE_ENV="production"                                   >> $GITHUB_ENV
+  echo TERM=xterm-256color                                     >> $GITHUB_ENV
+  echo FORCE_COLOR=1                                           >> $GITHUB_ENV
+
+  echo './node_modules/.bin'                                   >> $GITHUB_PATH
+  echo $HOME/.local/bin                                        >> $GITHUB_PATH
+  echo $RUNNER_WORKSPACE/.actions-cache/pnpm                   >> $GITHUB_PATH
+  echo $RUNNER_WORKSPACE/.actions-cache/bin                    >> $GITHUB_PATH
+  echo $GITHUB_WORKSPACE/.github/scripts                       >> $GITHUB_PATH
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Time / Benchmark
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+time-now() {
+  date +%s.%N
+}
+
+benchmark() {
+  local start=$1
+  local end=${2:-$(time-now)}
+  printf %.2f $(echo "$end - $start" | bc -l)
+}
+
+timestamp() {
+  printf "\n%-65s %s\n" "⌛ Time: $(benchmark $start)s" "⌛ Total: $(benchmark $initstart)s"
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Debug / Statistics / Information
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+show-cache-structure() {
+  ✨ "Cache structure ($ACTIONS_CACHE_DIR)"
+  dust -b -P -s $ACTIONS_CACHE_DIR
+  echo
+
+  ✨ "Cache structure ($TTL_CACHE_DIR)"
+  dust -b -P -s $TTL_CACHE_DIR
+  echo
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Formatters / Printers
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+✨() {
+  ___
+  start=$(time-now)
+  echo "✨ $1"
+  echo
+}
+
+✓() { echo -e "✓ ${R} $1"; }
+
+___() {
+  printf "\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n"
+}
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# File system
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+git-root() {
+  git rev-parse --show-toplevel
+}
+
+mk() {
+  mkdir -pv -p "$@" && cd "$_"
+}
+
+mkt() {
+  cd $(mktemp -d) && pwd
+}
+
+has-file-changed() {
+  changed_files="$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD 2>/dev/null)"
+  if $(echo "$changed_files" | grep --quiet "$1"); then
+    return 0
+  fi
+  return 1
+}
+
+# Allow calling for methods from outside
+for i in "$@"; do
+  "$i"
+done
+

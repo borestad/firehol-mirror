@@ -1,0 +1,109 @@
+# eslint-disable yml/no-empty-mapping-value
+
+name: Cron
+
+on:
+  workflow_dispatch:
+    inputs:
+      debug_enabled:
+        type: boolean
+        description: Enable debugging
+        required: false
+        default: false
+
+  push:
+    branches:
+      - main
+      - 'feature/**'
+  pull_request:
+
+  # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+  # schedule:
+  #   - cron: '*/5 * * * *'
+
+jobs:
+
+  # Job  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  build:
+    name: job ❯ build & run
+    runs-on: ubuntu-22.04
+    steps:
+      # ─────────────────────────────────────────────────────
+      - name: Bootstrap ❯❯ actions/checkout@v3
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      # ─────────────────────────────────────────────────────
+      - name: Bootstrap ❯❯ denoland/setup-deno@v1
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      # ─────────────────────────────────────────────────────
+      - name: Bootstrap ❯❯ Set env variables
+        run: |
+          .github/scripts/ciutil set-env-variables
+
+      # ─────────────────────────────────────────────────────
+      - uses: actions/cache@v3
+        name: Bootstrap ❯❯ Restore Cache
+        with:
+          path: ${{ env.ACTIONS_CACHE_DIR }}
+          key:  ${{ runner.os }}-v1-store-${{ env.CACHE_PREFIX }}-${{ hashFiles('**/deno.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-v1-store-${{ env.CACHE_PREFIX }}-
+            ${{ runner.os }}-v1-store-
+
+      - uses: actions/cache@v3
+        name: Bootstrap ❯❯ Restore TTL Cache
+        if: always()
+        with:
+          path: ${{ env.TTL_CACHE_DIR }}
+          key:  ${{ runner.os }}-ttl-cache-${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            ${{ runner.os }}-ttl-cache-
+            ${{ runner.os }}-
+
+      # ─────────────────────────────────────────────────────
+      - name: Bootstrap ❯❯ Preinstall & Prepare Environment
+        run: |
+          .github/scripts/setup
+
+      # ─────────────────────────────────────────────────────
+      - name: Cron ❯❯ Job1
+        # if: github.event.schedule != '*/5 * * * *'
+        run: |
+          pstats memo --ttl=300s -- 'deno run -A .github/bin/cron.ts'
+
+      # ─────────────────────────────────────────────────────
+      - name: Post hooks ❯❯ Commit to repository
+        if: github.ref == 'refs/heads/main'
+        run: |
+          .github/scripts/ciutil git-commit-to-repository
+          git push
+
+      # ─────────────────────────────────────────────────────
+      - name: "Debug ❯❯ Context Information"
+        id: github_context_step
+        env:
+          JSON_GITHUB: ${{ toJSON(github) }}
+          JSON_JOB: ${{ toJSON(job) }}
+          JSON_STEPS: ${{ toJSON(steps) }}
+          JSON_RUNNER: ${{ toJSON(runner) }}
+          JSON_STRATEGY: ${{ toJSON(strategy) }}
+          JSON_MATRIX: ${{ toJSON(MATRIX) }}
+        run: |
+          ip-public
+          .github/scripts/ciutil show-cache-structure
+          .github/scripts/ciutil ___
+
+          printf "$JSON_GITHUB"    >> $DEBUG_DIR/github.json
+          printf "$JSON_JOB"       >> $DEBUG_DIR/job.json
+          printf "$JSON_STEPS"     >> $DEBUG_DIR/steps.json
+          printf "$JSON_RUNNER"    >> $DEBUG_DIR/runner.json
+          printf "$JSON_STRATEGY"  >> $DEBUG_DIR/strategy.json
+          printf $JSON_MATRIX      >> $DEBUG_DIR/matrix.json
+
+          ga-dump-context
+
