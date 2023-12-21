@@ -10,15 +10,15 @@
 # Maintainer      : Spamhaus.org
 # Maintainer URL  : http://www.spamhaus.org/
 # List source URL : http://www.spamhaus.org/drop/drop.txt
-# Source File Date: Wed Dec 20 13:32:44 UTC 2023
+# Source File Date: Thu Dec 21 11:27:59 UTC 2023
 #
 # Category        : reputation
-# Version         : 703
+# Version         : 704
 #
-# This File Date  : Wed Dec 20 23:44:04 UTC 2023
+# This File Date  : Thu Dec 21 13:56:04 UTC 2023
 # Update Frequency: 12 hours 
 # Aggregation     : none
-# Entries         : 970 subnets, 15416576 unique IPs
+# Entries         : 971 subnets, 15420672 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -199,6 +199,7 @@
 89.42.152.0/23
 89.45.82.0/24
 89.46.47.0/24
+91.92.240.0/20
 91.132.164.0/22
 91.194.192.0/22
 91.200.12.0/22
