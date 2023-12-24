@@ -11,15 +11,15 @@
 # Maintainer      : CIDR-Report.org
 # Maintainer URL  : http://www.cidr-report.org
 # List source URL : http://www.cidr-report.org/bogons/freespace-prefix.txt
-# Source File Date: Sat Dec 23 04:02:45 UTC 2023
+# Source File Date: Sun Dec 24 04:02:53 UTC 2023
 #
 # Category        : unroutable
-# Version         : 990
+# Version         : 991
 #
-# This File Date  : Sat Dec 23 04:44:14 UTC 2023
+# This File Date  : Sun Dec 24 04:16:13 UTC 2023
 # Update Frequency: 1 day 
 # Aggregation     : none
-# Entries         : 8954 subnets, 603593984 unique IPs
+# Entries         : 8959 subnets, 603591168 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -3547,7 +3547,10 @@
 23.168.121.0/24
 23.168.122.0/23
 23.168.124.0/22
-23.168.128.0/20
+23.168.128.0/21
+23.168.137.0/24
+23.168.138.0/23
+23.168.140.0/22
 23.168.146.0/23
 23.168.148.0/22
 23.168.152.0/21
@@ -4745,9 +4748,11 @@
 27.123.224.0/22
 27.126.156.0/22
 31.207.0.0/21
-36.50.215.0/24
-36.50.216.0/21
-36.50.224.0/19
+36.50.221.0/24
+36.50.226.0/23
+36.50.228.0/22
+36.50.232.0/21
+36.50.240.0/20
 36.255.136.0/22
 41.57.113.0/24
 41.57.114.0/23
