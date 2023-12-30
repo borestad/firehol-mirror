@@ -8,15 +8,15 @@
 # Maintainer      : CleanTalk
 # Maintainer URL  : https://cleantalk.org/
 # List source URL : https://cleantalk.org/blacklists/submited_today
-# Source File Date: Sat Dec 30 13:17:16 UTC 2023
+# Source File Date: Sat Dec 30 13:56:39 UTC 2023
 #
 # Category        : abuse
-# Version         : 24073
+# Version         : 24074
 #
-# This File Date  : Sat Dec 30 13:17:17 UTC 2023
+# This File Date  : Sat Dec 30 13:56:40 UTC 2023
 # Update Frequency: 15 mins 
 # Aggregation     : 1 day 
-# Entries         : 676 unique IPs
+# Entries         : 682 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -28,6 +28,7 @@
 # Processed with FireHOL's iprange
 #
 1.10.232.47
+1.22.130.143
 1.22.130.191
 1.22.130.245
 1.22.130.249
@@ -48,6 +49,7 @@
 1.52.97.162
 1.52.124.137
 1.52.124.162
+1.52.198.0
 1.52.200.151
 1.53.6.179
 1.53.206.130
@@ -66,6 +68,7 @@
 3.81.40.150
 3.81.42.160
 3.81.47.20
+3.81.59.119
 3.81.61.109
 3.81.96.2
 3.81.117.49
@@ -249,6 +252,7 @@
 54.80.94.136
 54.80.198.163
 54.80.208.143
+54.81.12.176
 54.81.121.81
 54.81.177.67
 54.81.193.219
@@ -439,6 +443,7 @@
 103.239.105.131
 103.239.234.142
 103.240.234.130
+104.143.250.176
 104.239.5.121
 104.239.5.190
 104.239.20.27
@@ -502,6 +507,7 @@
 125.83.115.38
 125.162.165.129
 125.167.94.90
+128.14.16.117
 128.90.161.37
 132.145.127.134
 134.122.133.48
