@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+#set -euo pipefail
+
+. $(dirname $0)/ciutil
+GITROOT=`git-root`
+
+initstart=$(time-now)
+
+# =============================================================================
+# Setup
+# =============================================================================
+✨ "Setup: Create directories"
+create-directories
+
+✨ "Setup: Preinstall binaries"
+preinstall-binaries
+
+# =============================================================================
+# DEBUG
+# =============================================================================
+✨ "Debug: System information"
+system-info
+
+✨ "Debug: Env variables"
+ga-dump-env
+
+show-cache-structure
+timestamp
+
+✨ "pnpm install"
+install-nodemodules
+timestamp
