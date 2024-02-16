@@ -54,7 +54,7 @@ async function download(list: string[], {
     const start = performance.now()
 
     // Fetch
-    const res = await $ `mkdir -p ${to}; cd ${to}; timeout 60s bkt --cwd --discard-failures --ttl=${updateFreq} -- ${root}/.github/bin/dl ${feed}`
+    const res = await $ `mkdir -p ${to}; cd ${to}; timeout -s SIGINT 60s bkt --cwd --discard-failures --ttl=${updateFreq} -- ${root}/.github/bin/dl ${feed}`
       .noThrow().captureCombined()
 
 
