@@ -118,7 +118,7 @@ await download(blocklists, {
 log()
 log()
 
-await $ `cat /tmp/timeout.txt"`.noThrow().text()
+await $`cat /tmp/timeout.txt`.noThrow().text()
 
 log()
 log()
