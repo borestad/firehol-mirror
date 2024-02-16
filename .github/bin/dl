@@ -15,6 +15,7 @@ benchmark() {
   printf %.2f $(echo "$end - $start" | bc -l)
 }
 
+
 #
 # Main
 #
@@ -24,6 +25,13 @@ BASENAME=$(basename $URL | sd '\?.*' '')
 OUTPUT=${2:-$BASENAME}
 TEMPFILE=$(mktemp)
 TEMPDIR=$(mktemp -d)
+
+trap trap_timeout SIGINT SIGKILL TERM
+
+function trap_timeout() {
+  printf "%s %s\n" "$URL" $(ls -l $TEMPFILE | awk {'print $5'}) >> /tmp/timeout.txt
+}
+
 
 curl \
   --silent \
@@ -39,6 +47,7 @@ curl \
   "${URL}" 2>&1
 
   code=$?
+  echo "exit code: $code"
 
   if [ $code -ne 0 ]; then
     echo "❌ $URL"

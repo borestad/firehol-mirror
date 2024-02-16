@@ -118,6 +118,11 @@ await download(blocklists, {
 log()
 log()
 
+await $ `cat /tmp/timeout.txt"`.noThrow().text()
+
+log()
+log()
+
 await download(countries_ipip, {
   to: './ipip_country'
 })
