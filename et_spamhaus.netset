@@ -9,15 +9,15 @@
 # Maintainer      : Emerging Threats
 # Maintainer URL  : http://www.emergingthreats.net/
 # List source URL : http://rules.emergingthreats.net/fwrules/emerging-PIX-DROP.rules
-# Source File Date: Tue Mar 12 04:30:01 UTC 2024
+# Source File Date: Tue Mar 19 04:30:02 UTC 2024
 #
 # Category        : attacks
-# Version         : 486
+# Version         : 487
 #
-# This File Date  : Wed Mar 13 05:24:06 UTC 2024
+# This File Date  : Tue Mar 19 22:08:05 UTC 2024
 # Update Frequency: 12 hours 
 # Aggregation     : none
-# Entries         : 976 subnets, 15367168 unique IPs
+# Entries         : 978 subnets, 15369216 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -53,6 +53,7 @@
 36.37.48.0/20
 36.116.0.0/16
 36.119.0.0/16
+36.255.236.0/22
 37.77.144.0/24
 37.140.251.0/24
 37.156.64.0/23
@@ -68,6 +69,7 @@
 43.236.0.0/16
 43.248.40.0/22
 43.250.116.0/22
+45.9.148.0/22
 45.15.40.0/24
 45.65.32.0/22
 45.80.248.0/23
