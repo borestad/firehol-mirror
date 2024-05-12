@@ -10,9 +10,6 @@
 - Removed all `private` ips
 - Removed all `old/deprecated` blocklists
 - Proper `TTL to avoid spamming` https://iplists.firehol.org
-- Used as a baseline to `rebuild` the most common blocklists (`firehol_level1`,
-  `firehol_level2` etc) at https://github.com/borestad/firehol-ipsets-curated -
-  since they are currently composed of outdated ip-blocklists.
 - `Fix inconsistencies` between .netset (contains subnets) and .ipset (contain
   single ips)
 - git is a much `more efficient protocol` for fetching text files
