@@ -8,15 +8,15 @@
 # Maintainer      : iBlocklist.com
 # Maintainer URL  : https://www.iblocklist.com/
 # List source URL : http://list.iblocklist.com/?list=lujdnbasfaaixitgmxpp&fileformat=p2p&archiveformat=gz
-# Source File Date: Sat May 18 14:59:04 UTC 2024
+# Source File Date: Sun May 19 14:55:03 UTC 2024
 #
 # Category        : unroutable
-# Version         : 1739
+# Version         : 1740
 #
-# This File Date  : Sat May 18 15:28:45 UTC 2024
+# This File Date  : Sun May 19 15:32:52 UTC 2024
 # Update Frequency: 12 hours 
 # Aggregation     : none
-# Entries         : 9137 subnets, 602773696 unique IPs
+# Entries         : 9143 subnets, 602773696 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -4387,15 +4387,21 @@
 23.178.97.0/24
 23.178.98.0/23
 23.178.100.0/22
-23.178.104.0/21
+23.178.105.0/24
+23.178.106.0/23
+23.178.108.0/22
 23.178.113.0/24
 23.178.114.0/23
 23.178.116.0/22
-23.178.120.0/21
+23.178.121.0/24
+23.178.122.0/23
+23.178.124.0/22
 23.178.129.0/24
 23.178.130.0/23
 23.178.132.0/22
-23.178.136.0/21
+23.178.137.0/24
+23.178.138.0/23
+23.178.140.0/22
 23.178.145.0/24
 23.178.146.0/23
 23.178.148.0/22
@@ -6939,6 +6945,7 @@
 197.220.192.0/18
 197.231.136.0/21
 197.231.208.0/22
+197.231.248.0/22
 197.234.208.0/21
 197.255.248.0/22
 198.8.96.0/19
@@ -9036,7 +9043,6 @@
 204.174.47.0/24
 204.187.11.0/24
 204.187.129.0/24
-204.194.207.0/24
 204.209.52.0/22
 204.225.107.0/24
 205.142.128.0/22
