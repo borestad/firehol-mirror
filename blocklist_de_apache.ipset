@@ -10,33 +10,15 @@
 # Maintainer      : Blocklist.de
 # Maintainer URL  : https://www.blocklist.de/
 # List source URL : http://lists.blocklist.de/lists/apache.txt
-# Source File Date: Tue Jun 11 20:30:03 UTC 2024
+# Source File Date: Tue Jun 11 21:30:03 UTC 2024
 #
 # Category        : attacks
-# Version         : 147514
+# Version         : 147516
 #
-# This File Date  : Tue Jun 11 20:36:09 UTC 2024
+# This File Date  : Tue Jun 11 21:32:07 UTC 2024
 # Update Frequency: 15 mins 
 # Aggregation     : none
-# Entries         : 8322 unique IPs
-# Source File Date: Tue Jun 11 21:12:02 UTC 2024
-#
-# Category        : attacks
-# Version         : 147515
-#
-# This File Date  : Tue Jun 11 21:16:08 UTC 2024
-# Update Frequency: 15 mins 
-# Aggregation     : none
-# Entries         : 8327 unique IPs
-# Source File Date: Tue Jun 11 21:12:02 UTC 2024
-#
-# Category        : attacks
-# Version         : 147515
-#
-# This File Date  : Tue Jun 11 21:16:08 UTC 2024
-# Update Frequency: 15 mins 
-# Aggregation     : none
-# Entries         : 8327 unique IPs
+# Entries         : 8335 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -2125,12 +2107,14 @@
 34.19.90.248
 34.45.174.7
 34.48.16.147
+34.75.225.10
 34.88.64.38
 34.140.163.254
 34.174.21.89
 35.178.235.32
 35.203.76.91
 35.209.192.177
+35.214.190.212
 35.219.66.183
 35.223.17.18
 36.99.136.128
@@ -2185,6 +2169,7 @@
 47.242.2.139
 50.7.240.10
 50.62.220.192
+50.63.1.28
 51.91.151.60
 51.91.220.7
 51.178.136.164
@@ -2209,6 +2194,7 @@
 69.10.48.138
 77.109.139.87
 77.222.116.11
+78.131.12.248
 78.135.107.100
 80.76.49.233
 80.82.70.133
@@ -5142,6 +5128,7 @@
 149.56.150.79
 149.56.150.168
 149.56.160.211
+149.86.225.22
 149.255.62.25
 150.95.83.97
 152.42.212.241
@@ -5161,7 +5148,6 @@
 159.65.91.179
 159.65.218.221
 159.89.207.93
-159.138.89.136
 162.215.131.1
 162.240.104.103
 162.240.144.29
@@ -5185,6 +5171,7 @@
 172.212.106.86
 172.233.57.39
 173.44.49.91
+173.201.190.248
 173.208.166.178
 173.234.225.0
 173.234.225.1
@@ -6231,6 +6218,7 @@
 182.43.69.179
 182.43.77.118
 183.145.227.166
+184.168.117.19
 184.168.118.250
 184.168.126.98
 185.16.38.166
@@ -7020,6 +7008,7 @@
 192.251.226.255
 193.109.85.36
 193.143.1.119
+193.176.86.41
 193.176.86.61
 193.233.88.191
 194.28.224.132
@@ -7032,7 +7021,6 @@
 195.254.134.194
 196.2.13.238
 197.215.219.130
-198.12.233.186
 198.12.235.186
 198.199.120.244
 199.167.236.12
