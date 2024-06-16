@@ -9,15 +9,15 @@
 # Maintainer      : BitNodes
 # Maintainer URL  : https://getaddr.bitnodes.io/
 # List source URL : https://getaddr.bitnodes.io/api/v1/snapshots/latest/
-# Source File Date: Sun Jun 16 11:13:04 UTC 2024
+# Source File Date: Sun Jun 16 11:28:30 UTC 2024
 #
 # Category        : organizations
-# Version         : 179765
+# Version         : 179766
 #
-# This File Date  : Sun Jun 16 11:13:08 UTC 2024
+# This File Date  : Sun Jun 16 11:28:34 UTC 2024
 # Update Frequency: 10 mins 
 # Aggregation     : 7 days 
-# Entries         : 8240 unique IPs
+# Entries         : 8239 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -29,6 +29,7 @@
 # Processed with FireHOL's iprange
 #
 1.40.234.238
+1.52.22.120
 1.52.45.52
 1.53.0.232
 1.54.140.114
@@ -2649,7 +2650,6 @@
 70.40.31.149
 70.51.114.88
 70.52.112.109
-70.53.91.205
 70.58.22.2
 70.59.29.118
 70.65.84.206
@@ -5223,7 +5223,7 @@
 102.37.222.103
 102.113.28.5
 102.113.133.84
-102.130.113.94
+102.113.146.57
 102.132.192.141
 102.215.215.235
 102.222.108.67
@@ -5336,6 +5336,7 @@
 106.68.237.100
 106.69.84.49
 106.69.86.96
+106.69.89.90
 106.72.39.130
 106.75.169.133
 106.138.0.40
@@ -5492,7 +5493,6 @@
 109.199.113.214
 109.199.123.117
 109.199.124.114
-109.201.212.149
 109.202.213.54
 109.205.182.56
 109.206.168.240
@@ -7906,7 +7906,6 @@
 205.209.126.2
 205.250.189.74
 206.81.16.219
-206.123.150.88
 206.125.169.164
 206.126.81.37
 206.189.3.163
