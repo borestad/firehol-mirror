@@ -12,12 +12,12 @@
 # Maintainer      : Emerging Threats
 # Maintainer URL  : http://www.emergingthreats.net/
 # List source URL : http://rules.emergingthreats.net/fwrules/emerging-Block-IPs.txt
-# Source File Date: Fri Jun 14 04:30:01 UTC 2024
+# Source File Date: Mon Jun 17 04:30:01 UTC 2024
 #
 # Category        : attacks
-# Version         : 1531
+# Version         : 1532
 #
-# This File Date  : Sat Jun 15 09:28:08 UTC 2024
+# This File Date  : Mon Jun 17 22:48:05 UTC 2024
 # Update Frequency: 12 hours 
 # Aggregation     : none
 # Entries         : 1357 subnets, 16339460 unique IPs
@@ -185,6 +185,7 @@
 63.175.84.0/24
 63.175.86.0/24
 64.15.0.0/20
+64.62.197.0/24
 64.69.16.0/20
 64.92.224.0/20
 64.137.39.0/24
@@ -470,7 +471,6 @@
 103.248.68.0/22
 103.250.172.0/22
 103.253.216.0/22
-104.156.155.0/24
 104.193.228.0/22
 104.206.247.0/24
 104.244.56.0/21
@@ -1039,6 +1039,7 @@
 199.33.222.0/24
 199.34.128.0/18
 199.38.0.0/21
+199.45.154.0/24
 199.59.8.0/21
 199.60.102.0/24
 199.71.139.0/24
@@ -1372,7 +1373,6 @@
 212.237.152.0/21
 213.109.202.0/24
 213.130.88.0/22
-213.139.205.0/24
 213.226.123.0/24
 216.63.240.0/22
 216.93.96.0/19
