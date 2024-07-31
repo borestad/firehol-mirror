@@ -11,15 +11,15 @@
 # Maintainer      : FireHOL
 # Maintainer URL  : http://iplists.firehol.org/
 # List source URL : 
-# Source File Date: Wed Jul 31 10:00:48 UTC 2024
+# Source File Date: Wed Jul 31 10:36:26 UTC 2024
 #
 # Category        : abuse
-# Version         : 140272
+# Version         : 140273
 #
-# This File Date  : Wed Jul 31 10:01:31 UTC 2024
+# This File Date  : Wed Jul 31 10:37:43 UTC 2024
 # Update Frequency: 1 min 
 # Aggregation     : none
-# Entries         : 7292 subnets, 7497 unique IPs
+# Entries         : 7287 subnets, 7491 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -31,7 +31,6 @@
 # Processed with FireHOL's iprange
 #
 1.23.121.108
-1.52.13.194
 1.52.128.113
 1.52.248.205
 1.53.88.188
@@ -538,7 +537,6 @@
 27.7.217.83
 27.7.227.157
 27.33.173.87
-27.42.99.207
 27.59.125.191
 27.61.177.216
 27.65.117.24
@@ -1017,7 +1015,6 @@
 41.140.12.41
 41.174.122.250
 41.175.64.240
-41.190.233.51
 41.193.87.246
 41.202.219.68
 41.202.232.243
@@ -5058,7 +5055,6 @@
 166.194.154.65
 166.199.148.15
 166.199.169.36
-167.102.23.82
 167.160.67.44
 167.160.72.203
 167.160.78.151
@@ -5299,7 +5295,7 @@
 173.239.218.218
 173.239.218.220
 173.239.218.222
-173.239.218.224/31
+173.239.218.225
 173.239.218.227
 173.239.218.228/31
 173.239.218.232
@@ -6155,7 +6151,6 @@
 192.28.150.228
 192.28.152.140
 192.42.116.19
-192.42.116.20
 192.42.116.22
 192.42.116.25
 192.42.116.26
