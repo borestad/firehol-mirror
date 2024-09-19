@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -e
+
+# if less than 2 arguments are passed to the script, print an error and exit
+if [[ $# < 2 ]]
+	then
+		printf "%b" "Usage: [FILE] [EXCLUDE_FILE] [OPTIONS]"
+		exit 1
+fi
+
+
+FILE=$1
+EXCLUDE_FILE=$2
+shift 2
+ARGS="$@"
+
+
+TEMPFILE="$(mktemp)"
+mv "$FILE" $TEMPFILE
+
+# Keep comments in file
+rg '^#' $TEMPFILE >| $FILE
+rg '^#' $TEMPFILE --invert-match | iprange - $ARGS --exclude-next $EXCLUDE_FILE >> $FILE
