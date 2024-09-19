@@ -29,8 +29,8 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       # ─────────────────────────────────────────────────────
-      - name: Bootstrap ❯❯ actions/checkout@v3
-        uses: actions/checkout@v3
+      - name: Bootstrap ❯❯ actions/checkout@v4
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
 
@@ -46,7 +46,7 @@ jobs:
           .github/scripts/ciutil set-env-variables
 
       # ─────────────────────────────────────────────────────
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Bootstrap ❯❯ Restore Cache
         with:
           path: ${{ env.ACTIONS_CACHE_DIR }}
@@ -55,7 +55,7 @@ jobs:
             ${{ runner.os }}-v1-store-${{ env.CACHE_PREFIX }}-
             ${{ runner.os }}-v1-store-
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Bootstrap ❯❯ Restore TTL Cache
         if: always()
         with:
