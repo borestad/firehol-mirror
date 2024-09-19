@@ -60,11 +60,10 @@ jobs:
         if: always()
         with:
           path: ${{ env.TTL_CACHE_DIR }}
-          key:  ${{ runner.os }}-v1-ttl-cache-${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
+          key:  ${{ runner.os }}-v1-ttl-cache-${{ env.CACHE_PREFIX }}-${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: |
+            ${{ runner.os }}-v1-ttl-cache-${{ env.CACHE_PREFIX }}-
             ${{ runner.os }}-v1-ttl-cache-
-            ${{ runner.os }}-
-
       # ─────────────────────────────────────────────────────
       - name: Bootstrap ❯❯ Preinstall & Prepare Environment
         run: |
