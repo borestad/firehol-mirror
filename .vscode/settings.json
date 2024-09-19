@@ -25,7 +25,7 @@
   "deno.suggest.paths": true,
   "deno.unstable": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "editor.defaultFormatter": "denoland.vscode-deno",
   "editor.formatOnSave": false,

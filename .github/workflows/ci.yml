@@ -60,9 +60,9 @@ jobs:
         if: always()
         with:
           path: ${{ env.TTL_CACHE_DIR }}
-          key:  ${{ runner.os }}-ttl-cache-${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
+          key:  ${{ runner.os }}-v1-ttl-cache-${{ github.sha }}-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: |
-            ${{ runner.os }}-ttl-cache-
+            ${{ runner.os }}-v1-ttl-cache-
             ${{ runner.os }}-
 
       # ─────────────────────────────────────────────────────
