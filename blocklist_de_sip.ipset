@@ -10,6 +10,7 @@
 # Maintainer      : Blocklist.de
 # Maintainer URL  : https://www.blocklist.de/
 # List source URL : http://lists.blocklist.de/lists/sip.txt
+<<<<<<< Updated upstream
 # Source File Date: Mon Nov  4 13:36:04 UTC 2024
 #
 # Category        : attacks
@@ -19,6 +20,17 @@
 # Update Frequency: 15 mins 
 # Aggregation     : none
 # Entries         : 51 unique IPs
+=======
+# Source File Date: Mon Nov  4 13:48:04 UTC 2024
+#
+# Category        : attacks
+# Version         : 143214
+#
+# This File Date  : Mon Nov  4 13:56:07 UTC 2024
+# Update Frequency: 15 mins 
+# Aggregation     : none
+# Entries         : 48 unique IPs
+>>>>>>> Stashed changes
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -38,7 +50,6 @@
 42.200.229.102
 43.153.176.141
 43.163.197.66
-45.201.204.198
 47.76.113.194
 47.84.76.59
 87.98.251.101
@@ -47,13 +58,17 @@
 93.115.27.71
 94.23.148.30
 94.141.120.209
+<<<<<<< Updated upstream
 103.60.102.99
 103.97.177.91
+=======
+103.97.177.91
+103.165.130.61
+>>>>>>> Stashed changes
 103.255.222.80
 106.75.15.36
 106.250.1.54
 109.199.112.114
-111.67.197.124
 112.184.141.69
 124.137.205.56
 142.93.64.25
@@ -63,16 +78,22 @@
 152.136.180.128
 157.97.121.147
 167.99.255.59
+<<<<<<< Updated upstream
 171.248.148.201
+=======
+>>>>>>> Stashed changes
 179.60.228.74
 181.188.159.138
-185.81.30.180
 185.197.74.92
 185.198.69.209
 186.121.205.29
 190.153.249.99
 192.124.216.10
 193.122.126.17
+<<<<<<< Updated upstream
+=======
+200.90.8.90
+>>>>>>> Stashed changes
 201.116.3.194
 201.249.89.102
 206.189.1.50
