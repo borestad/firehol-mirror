@@ -10,17 +10,6 @@
 # Maintainer      : Blocklist.de
 # Maintainer URL  : https://www.blocklist.de/
 # List source URL : http://lists.blocklist.de/lists/imap.txt
-<<<<<<< Updated upstream
-# Source File Date: Sun Jan  5 10:30:05 UTC 2025
-#
-# Category        : attacks
-# Version         : 171359
-#
-# This File Date  : Sun Jan  5 10:36:07 UTC 2025
-# Update Frequency: 15 mins 
-# Aggregation     : none
-# Entries         : 3501 unique IPs
-=======
 # Source File Date: Sun Jan  5 10:48:26 UTC 2025
 #
 # Category        : attacks
@@ -30,7 +19,6 @@
 # Update Frequency: 15 mins 
 # Aggregation     : none
 # Entries         : 3495 unique IPs
->>>>>>> Stashed changes
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -965,6 +953,7 @@
 80.15.180.102
 80.29.176.41
 80.74.73.25
+80.94.95.235
 80.94.95.239
 80.94.246.253
 80.151.154.196
@@ -1445,10 +1434,6 @@
 109.226.15.135
 109.226.15.176
 109.226.44.109
-<<<<<<< Updated upstream
-109.233.87.208
-=======
->>>>>>> Stashed changes
 109.244.68.3
 110.4.0.180
 110.14.192.20
@@ -2543,10 +2528,6 @@
 179.127.197.89
 179.181.133.153
 179.185.227.77
-<<<<<<< Updated upstream
-179.236.213.190
-=======
->>>>>>> Stashed changes
 180.7.153.111
 180.7.158.141
 180.7.180.24
@@ -2976,10 +2957,6 @@
 198.2.97.105
 198.45.12.32
 198.54.106.83
-<<<<<<< Updated upstream
-198.91.129.195
-=======
->>>>>>> Stashed changes
 198.91.165.171
 198.91.200.139
 198.100.138.225
@@ -3148,7 +3125,6 @@
 211.97.63.206
 211.97.63.209
 211.105.213.144
-211.105.223.49
 211.106.103.140
 211.107.192.176
 211.109.75.69
@@ -3309,6 +3285,7 @@
 218.219.228.113
 218.219.228.162
 218.219.228.163
+218.237.71.112
 218.239.160.200
 219.77.29.126
 219.93.110.137
