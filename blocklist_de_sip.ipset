@@ -10,12 +10,12 @@
 # Maintainer      : Blocklist.de
 # Maintainer URL  : https://www.blocklist.de/
 # List source URL : http://lists.blocklist.de/lists/sip.txt
-# Source File Date: Tue Jan 14 03:48:05 UTC 2025
+# Source File Date: Tue Jan 14 04:07:05 UTC 2025
 #
 # Category        : attacks
-# Version         : 147742
+# Version         : 147743
 #
-# This File Date  : Tue Jan 14 03:48:08 UTC 2025
+# This File Date  : Tue Jan 14 04:12:08 UTC 2025
 # Update Frequency: 15 mins 
 # Aggregation     : none
 # Entries         : 21 unique IPs
@@ -30,7 +30,6 @@
 # Processed with FireHOL's iprange
 #
 2.57.122.193
-46.245.94.174
 64.64.116.19
 83.168.71.73
 85.10.206.80
@@ -38,6 +37,7 @@
 92.222.86.142
 103.37.60.62
 103.172.41.119
+111.67.194.26
 154.203.197.180
 157.173.206.0
 165.154.207.11
