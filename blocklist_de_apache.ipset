@@ -10,15 +10,15 @@
 # Maintainer      : Blocklist.de
 # Maintainer URL  : https://www.blocklist.de/
 # List source URL : http://lists.blocklist.de/lists/apache.txt
-# Source File Date: Mon Feb 24 00:00:07 UTC 2025
+# Source File Date: Mon Feb 24 00:18:04 UTC 2025
 #
 # Category        : attacks
-# Version         : 166700
+# Version         : 166701
 #
-# This File Date  : Mon Feb 24 00:00:21 UTC 2025
+# This File Date  : Mon Feb 24 00:24:05 UTC 2025
 # Update Frequency: 15 mins 
 # Aggregation     : none
-# Entries         : 8605 unique IPs
+# Entries         : 8607 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -2094,6 +2094,7 @@
 5.167.71.253
 5.167.71.254
 5.167.71.255
+5.179.0.85
 5.180.253.202
 5.182.33.212
 5.189.169.121
@@ -2235,6 +2236,7 @@
 65.2.191.208
 65.108.68.234
 66.29.132.12
+66.29.132.113
 66.29.134.113
 66.29.141.248
 66.29.146.160
@@ -2251,6 +2253,7 @@
 67.205.20.204
 67.222.107.199
 67.227.175.32
+68.168.113.10
 68.178.153.122
 68.178.173.132
 68.183.190.245
@@ -7301,7 +7304,6 @@
 198.54.114.73
 198.54.126.50
 198.58.105.164
-198.58.111.151
 198.186.130.214
 199.7.240.10
 199.71.233.126
@@ -7309,7 +7311,6 @@
 199.116.78.181
 199.188.200.86
 200.55.198.234
-200.81.185.179
 200.239.129.69
 201.148.107.79
 202.5.17.26
@@ -7325,6 +7326,7 @@
 206.189.38.230
 207.154.207.182
 207.244.240.98
+208.107.66.243
 208.109.229.141
 208.109.232.99
 208.109.243.208
