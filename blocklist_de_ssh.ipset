@@ -10,15 +10,15 @@
 # Maintainer      : Blocklist.de
 # Maintainer URL  : https://www.blocklist.de/
 # List source URL : http://lists.blocklist.de/lists/ssh.txt
-# Source File Date: Wed Mar  5 03:44:02 UTC 2025
+# Source File Date: Wed Mar  5 03:54:03 UTC 2025
 #
 # Category        : attacks
-# Version         : 173579
+# Version         : 173580
 #
-# This File Date  : Wed Mar  5 03:44:08 UTC 2025
+# This File Date  : Wed Mar  5 04:00:12 UTC 2025
 # Update Frequency: 15 mins 
 # Aggregation     : none
-# Entries         : 5057 unique IPs
+# Entries         : 5059 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -705,6 +705,7 @@
 36.140.114.112
 36.140.133.225
 36.144.125.11
+36.144.126.18
 36.144.127.184
 36.153.69.2
 36.155.14.189
@@ -1594,7 +1595,6 @@
 86.98.71.78
 86.102.131.54
 86.104.220.73
-87.27.244.108
 87.107.11.67
 87.125.174.165
 87.179.156.42
@@ -1640,6 +1640,7 @@
 89.134.194.189
 89.134.209.31
 89.160.118.239
+89.216.107.99
 89.218.69.66
 89.236.200.96
 89.245.48.203
@@ -2813,6 +2814,7 @@
 120.157.32.129
 120.157.38.255
 120.157.41.62
+120.157.58.127
 120.157.67.124
 120.157.85.214
 120.157.153.177
@@ -3889,6 +3891,7 @@
 172.105.128.13
 172.105.246.139
 172.171.190.90
+172.174.5.146
 172.174.72.225
 172.245.42.201
 172.245.106.166
@@ -5046,7 +5049,6 @@
 222.89.138.40
 222.90.6.250
 222.90.10.85
-222.92.84.250
 222.96.27.50
 222.98.122.37
 222.107.156.227
