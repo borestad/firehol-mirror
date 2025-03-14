@@ -12,15 +12,15 @@
 # Maintainer      : Blocklist.de
 # Maintainer URL  : https://www.blocklist.de/
 # List source URL : http://lists.blocklist.de/lists/bots.txt
-# Source File Date: Fri Mar 14 15:07:06 UTC 2025
+# Source File Date: Fri Mar 14 15:44:05 UTC 2025
 #
 # Category        : attacks
-# Version         : 102610
+# Version         : 102612
 #
-# This File Date  : Fri Mar 14 15:08:08 UTC 2025
+# This File Date  : Fri Mar 14 15:44:09 UTC 2025
 # Update Frequency: 15 mins 
 # Aggregation     : none
-# Entries         : 954 unique IPs
+# Entries         : 952 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -367,6 +367,7 @@
 5.255.231.44
 5.255.231.46
 5.255.231.56
+5.255.231.73
 5.255.231.90
 5.255.231.94
 5.255.231.108
@@ -676,7 +677,6 @@
 40.77.167.38
 40.77.167.55
 40.77.167.59
-40.77.167.67
 40.77.167.71
 40.77.167.72
 40.77.167.74
@@ -702,7 +702,6 @@
 46.250.173.150
 47.121.133.117
 47.242.95.94
-47.242.167.47
 47.242.222.214
 47.243.74.123
 51.144.237.161
@@ -733,7 +732,6 @@
 52.167.144.158
 52.167.144.160
 52.167.144.167
-52.167.144.180
 52.167.144.184
 52.167.144.189
 52.167.144.195
@@ -909,7 +907,6 @@
 159.138.123.184
 159.203.89.49
 159.223.46.180
-159.223.46.228
 161.97.66.162
 162.158.6.67
 163.5.91.98
@@ -971,6 +968,7 @@
 213.180.203.60
 213.180.203.66
 213.180.203.82
+213.180.203.95
 213.180.203.124
 213.180.203.145
 213.180.203.147
