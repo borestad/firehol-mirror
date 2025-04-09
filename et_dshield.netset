@@ -9,12 +9,12 @@
 # Maintainer      : Emerging Threats
 # Maintainer URL  : http://www.emergingthreats.net/
 # List source URL : http://rules.emergingthreats.net/fwrules/emerging-PIX-DSHIELD.rules
-# Source File Date: Tue Apr  8 04:30:01 UTC 2025
+# Source File Date: Wed Apr  9 04:30:01 UTC 2025
 #
 # Category        : attacks
-# Version         : 1698
+# Version         : 1699
 #
-# This File Date  : Tue Apr  8 22:44:04 UTC 2025
+# This File Date  : Wed Apr  9 23:08:07 UTC 2025
 # Update Frequency: 12 hours 
 # Aggregation     : none
 # Entries         : 20 subnets, 5120 unique IPs
@@ -31,8 +31,8 @@
 45.148.10.0/24
 57.129.64.0/24
 64.62.156.0/24
+64.62.197.0/24
 83.222.191.0/24
-89.248.163.0/24
 91.196.152.0/24
 103.102.230.0/24
 104.234.115.0/24
