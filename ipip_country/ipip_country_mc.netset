@@ -8,15 +8,15 @@
 # Maintainer      : ipip.net
 # Maintainer URL  : http://ipip.net
 # List source URL : https://cdn.ipip.net/17mon/country.zip
-# Source File Date: Wed Feb  5 12:47:36 UTC 2025
+# Source File Date: Mon Oct 27 08:02:56 UTC 2025
 #
 # Category        : geolocation
-# Version         : 30
+# Version         : 31
 #
-# This File Date  : Mon Feb 10 10:41:57 UTC 2025
+# This File Date  : Wed Oct 29 07:29:06 UTC 2025
 # Update Frequency: 1 day 
 # Aggregation     : none
-# Entries         : 160 subnets, 61486 unique IPs
+# Entries         : 164 subnets, 62260 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -92,6 +92,7 @@
 88.209.64.0/18
 91.198.207.0/24
 91.199.109.0/24
+91.230.188.0/24
 104.28.11.195
 104.28.11.196/31
 104.28.34.79
@@ -102,6 +103,8 @@
 104.28.96.74
 104.28.98.70/31
 104.28.135.68/31
+104.28.190.104/30
+104.28.190.108/31
 104.28.222.165
 104.28.222.166/31
 104.28.222.168/31
@@ -117,6 +120,8 @@
 146.75.166.110/31
 162.120.213.8
 162.120.215.2
+164.137.91.0/24
+164.137.211.0/24
 172.225.26.96/27
 172.225.144.224/27
 172.225.161.64/28
@@ -141,7 +146,7 @@
 195.78.0.80/29
 195.78.0.88
 195.78.0.94
-195.78.0.96/31
+195.78.0.96
 195.78.0.100/31
 195.78.0.103
 195.78.0.104/30
@@ -150,8 +155,7 @@
 195.78.0.112/31
 195.78.0.117
 195.78.0.119
-195.78.0.120/31
-195.78.0.122
+195.78.0.120/30
 195.78.0.126
 195.78.0.128/30
 195.78.0.132/31
