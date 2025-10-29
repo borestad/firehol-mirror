@@ -9,15 +9,15 @@
 # Maintainer      : ipip.net
 # Maintainer URL  : http://ipip.net
 # List source URL : https://cdn.ipip.net/17mon/country.zip
-# Source File Date: Wed Feb  5 12:47:36 UTC 2025
+# Source File Date: Mon Oct 27 08:02:56 UTC 2025
 #
 # Category        : geolocation
-# Version         : 15
+# Version         : 16
 #
-# This File Date  : Mon Feb 10 10:41:18 UTC 2025
+# This File Date  : Wed Oct 29 07:28:32 UTC 2025
 # Update Frequency: 1 day 
 # Aggregation     : none
-# Entries         : 70 subnets, 29507 unique IPs
+# Entries         : 77 subnets, 30182 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -37,16 +37,20 @@
 104.28.30.66/31
 104.28.30.92/31
 104.28.92.113
+104.28.172.107
+104.28.172.108/30
 104.28.204.132/30
 104.28.204.136
 104.28.236.132/30
 104.28.236.136
 136.23.22.51
 136.23.26.35
+138.99.215.128/25
 138.185.208.0/22
 140.248.4.6/31
 140.248.44.12/31
 143.0.32.0/22
+143.105.254.0/23
 146.75.228.12/31
 146.75.252.4/31
 161.0.80.0/20
@@ -56,6 +60,7 @@
 172.225.238.64/28
 172.225.250.32/27
 172.226.10.64/28
+172.226.189.192/27
 186.159.96.0/22
 186.159.101.0/24
 186.159.102.0/23
@@ -72,9 +77,11 @@
 190.123.16.32/27
 190.123.16.64/27
 190.123.16.112/31
-190.123.16.116/30
+190.123.16.117
+190.123.16.118/31
 190.123.16.120/31
-190.123.16.124/30
+190.123.16.125
+190.123.16.126/31
 190.123.16.128/27
 190.123.16.161
 190.123.16.165
