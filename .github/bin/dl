@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+set -o errexit
+set -e
+
+#
+# Helpers
+#
+time-now() {
+  date +%s.%N
+}
+benchmark() {
+  local start=$1
+  local end=${2:-$(time-now)}
+  printf %.2f $(echo "$end - $start" | bc -l)
+}
+
+
+#
+# Main
+#
+DIR=$(pwd)
+URL=$1
+BASENAME=$(basename $URL | sd '\?.*' '')
+OUTPUT=${2:-$BASENAME}
+TEMPFILE=$(mktemp)
+TEMPDIR=$(mktemp -d)
+
+trap trap_timeout SIGINT SIGKILL TERM
+
+function trap_timeout() {
+  printf "%s %s\n" "$URL" $(ls -l $TEMPFILE | awk {'print $5'}) >> /tmp/timeout.txt
+  exit 99
+}
+
+
+curl \
+  --silent \
+  --show-error \
+  --location \
+  --keepalive \
+  --connect-timeout 5 \
+  --retry 1 \
+  --http2 \
+  --fail-with-body \
+  --compressed \
+  -o "$TEMPFILE" \
+  "${URL}" 2>&1
+
+  code=$?
+  echo "exit code: $code"
+
+  if [ $code -ne 0 ]; then
+    echo "❌ $URL"
+    exit $code
+  fi
+
+cd $DIR
+
+mkdir -p "$(dirname "$OUTPUT")"
+mv $TEMPFILE $OUTPUT

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# List files in git root older than N months based on their "Source File Date" field
+
+[ -z "$1" ] && echo "Usage: $0 <months>" >&2 && exit 1
+set -euo pipefail
+
+cd "$(git rev-parse --show-toplevel)"
+cutoff=$(date -d "$1 months ago" +%s)
+
+fd -d1 -t f -0 . | while read -rd '' f; do
+  line=$(rg -m1 -F 'Source File Date:' --no-line-number -- "$f" 2>/dev/null || true)
+  [ -n "$line" ] || continue
+
+  date=$(printf '%s' "$line" | sed 's/.*Source File Date: //')
+  epoch=$(date -d "$date" +%s 2>/dev/null || true)
+
+  [ -n "$epoch" ] && [ "$epoch" -lt "$cutoff" ] && basename "$f"
+done

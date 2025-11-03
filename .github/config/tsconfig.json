@@ -1,0 +1,23 @@
+{
+  "extends": "@tsconfig/deno/tsconfig.json",
+  "include": [
+    "../../**/*.ts",
+    "../../.github/**/*.ts"
+  ],
+  "exclude": [
+    "deno.json"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "rootDir": ".",
+    "target": "ESNext",
+    "outDir": "./dist",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "checkJs": true,
+    "moduleResolution": "nodenext",
+    "strict": true
+  }
+}
