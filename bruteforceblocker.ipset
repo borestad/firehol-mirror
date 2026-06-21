@@ -13,15 +13,15 @@
 # Maintainer      : danger.rulez.sk
 # Maintainer URL  : http://danger.rulez.sk/index.php/bruteforceblocker/
 # List source URL : http://danger.rulez.sk/projects/bruteforceblocker/blist.php
-# Source File Date: Sat Jun 20 22:31:18 UTC 2026
+# Source File Date: Sun Jun 21 03:12:14 UTC 2026
 #
 # Category        : attacks
-# Version         : 16557
+# Version         : 16558
 #
-# This File Date  : Sat Jun 20 22:32:30 UTC 2026
+# This File Date  : Sun Jun 21 03:12:32 UTC 2026
 # Update Frequency: 3 hours 
 # Aggregation     : none
-# Entries         : 621 unique IPs
+# Entries         : 622 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -33,7 +33,6 @@
 # Processed with FireHOL's iprange
 #
 2.26.252.159
-2.27.22.122
 2.57.121.25
 2.59.183.60
 5.61.209.24
@@ -440,7 +439,6 @@
 101.200.96.234
 101.201.226.38
 101.201.233.222
-102.210.82.20
 102.210.148.203
 102.216.134.50
 103.24.212.42
@@ -509,12 +507,14 @@
 121.40.151.192
 121.40.210.59
 121.41.81.216
+121.41.97.232
 121.43.134.236
 121.123.141.251
 121.165.187.77
 121.178.185.141
 121.185.89.74
 121.196.157.119
+121.196.227.86
 123.56.124.190
 124.108.17.138
 124.123.125.62
@@ -639,6 +639,7 @@
 207.175.99.187
 209.97.183.43
 211.63.214.90
+211.103.219.51
 212.19.134.75
 213.209.159.56
 216.108.231.34
