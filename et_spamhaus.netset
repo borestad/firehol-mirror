@@ -9,15 +9,15 @@
 # Maintainer      : Emerging Threats
 # Maintainer URL  : http://www.emergingthreats.net/
 # List source URL : http://rules.emergingthreats.net/fwrules/emerging-PIX-DROP.rules
-# Source File Date: Tue Jul 21 04:30:01 UTC 2026
+# Source File Date: Wed Jul 22 04:30:01 UTC 2026
 #
 # Category        : attacks
-# Version         : 936
+# Version         : 937
 #
-# This File Date  : Tue Jul 21 21:52:10 UTC 2026
+# This File Date  : Thu Jul 23 01:44:08 UTC 2026
 # Update Frequency: 12 hours 
 # Aggregation     : none
-# Entries         : 1414 subnets, 14774016 unique IPs
+# Entries         : 1414 subnets, 14904320 unique IPs
 #
 # Full list analysis, including geolocation map, history,
 # retention policy, overlaps with other lists, etc.
@@ -150,7 +150,6 @@
 45.80.248.0/23
 45.83.28.0/24
 45.83.31.0/24
-45.86.48.0/22
 45.87.249.0/24
 45.88.186.0/24
 45.91.227.0/24
@@ -649,6 +648,7 @@
 138.185.116.0/22
 138.219.172.0/22
 138.226.236.0/23
+138.241.0.0/16
 139.183.192.0/18
 140.82.64.0/19
 140.82.96.0/20
@@ -773,6 +773,7 @@
 167.31.0.0/16
 167.74.0.0/18
 167.158.0.0/16
+167.185.0.0/16
 167.224.48.0/21
 167.249.200.0/22
 168.0.212.0/22
@@ -872,7 +873,6 @@
 185.56.83.0/24
 185.64.23.0/24
 185.68.152.0/22
-185.77.248.0/24
 185.81.68.0/24
 185.84.157.0/24
 185.93.89.0/24
@@ -1028,7 +1028,6 @@
 193.139.0.0/16
 193.142.146.0/23
 193.143.1.0/24
-193.151.160.0/22
 193.169.194.0/23
 193.202.82.0/23
 193.221.200.0/23
@@ -1126,6 +1125,9 @@
 198.160.205.0/24
 198.160.212.0/22
 198.160.216.0/24
+198.160.231.0/24
+198.160.232.0/22
+198.160.236.0/24
 198.169.201.0/24
 198.177.175.0/24
 198.177.176.0/22
